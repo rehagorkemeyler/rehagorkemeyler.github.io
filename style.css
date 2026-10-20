@@ -601,6 +601,70 @@ img {
     height: 520px;
 }
 
+/* --- Compact project --- */
+.compact-project {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 2.5rem;
+    align-items: center;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--color-light-gray);
+    transition: border-color var(--transition);
+}
+
+.compact-project:hover {
+    border-color: var(--color-accent);
+}
+
+.compact-media {
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 20px 40px rgba(26, 26, 26, 0.18);
+}
+
+.compact-media img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.compact-project:hover .compact-media img {
+    transform: scale(1.04);
+}
+
+.compact-text h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0.75rem 0 0.4rem;
+    color: var(--color-black);
+}
+
+.compact-tagline {
+    font-size: 1rem;
+    color: var(--color-accent);
+    margin-bottom: 1.25rem;
+}
+
+.compact-text .featured-points {
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+}
+
+.compact-text .featured-points li {
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.compact-text .featured-stack {
+    padding-top: 1rem;
+}
+
+.compact-text .featured-links {
+    margin-top: 1.25rem;
+}
+
 .phone {
     position: absolute;
     width: 220px;
@@ -794,6 +858,11 @@ a.contact-card:hover {
         padding: 2.5rem;
     }
 
+    .compact-project {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
     .featured-screens {
         height: 460px;
         max-width: 440px;
@@ -909,6 +978,10 @@ a.contact-card:hover {
         font-size: 2.6rem;
     }
 
+    .compact-project {
+        padding: 1.75rem;
+    }
+
     .featured-screens {
         height: 380px;
     }
@@ -938,7 +1011,8 @@ a.contact-card:hover {
     }
 
     .reveal,
-    .phone {
+    .phone,
+    .compact-media img {
         transition: none;
     }
 
