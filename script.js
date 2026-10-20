@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scroll-reveal animation ---
     const revealElements = document.querySelectorAll(
-        '.about-text, .about-details, .exp-item, .project-card, .interest-item, .contact-card, .contact-intro'
+        '.about-text, .about-details, .exp-item, .featured-project, .project-card, .interest-item, .contact-card, .contact-intro'
     );
 
     revealElements.forEach(el => el.classList.add('reveal'));
